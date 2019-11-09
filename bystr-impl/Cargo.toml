@@ -1,8 +1,11 @@
 [package]
 name = "bystr-impl"
 version = "0.1.0"
+description = "implementation of the bystr macro"
 authors = ["Zach Marcantel <zmarcantel@gmail.com>"]
 edition = "2018"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/zmarcantel/bystr-rs"
 
 [lib]
 proc-macro = true

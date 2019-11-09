@@ -8,4 +8,4 @@ edition = "2018"
 path = "lib.rs"
 
 [dependencies]
-bystr = { path = "../" }
+bystr = { version = "0.1.0", path = "../" }
