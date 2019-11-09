@@ -1,0 +1,15 @@
+[package]
+name = "bystr"
+version = "0.1.0"
+description = "macro to create compile-time, fixed length, byte array from a string"
+authors = ["Zach Marcantel <zmarcantel@gmail.com>"]
+edition = "2018"
+license = "GPLv3"
+repository = "https://github.com/zmarcantel/bystr-rs"
+
+[workspace]
+members = ["./bystr-impl", "./tests"]
+
+[dependencies]
+proc-macro-hack = "^0.5.11"
+bystr-impl = { path = "./bystr-impl" }
