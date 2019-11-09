@@ -2,7 +2,7 @@ bystr
 ===========
 
 [![docs.rs/bystr](https://docs.rs/bystr/badge.svg)](https://docs.rs/bystr)
-[![Build Status](https://travis-ci.org/zmarcantel/bystr.svg?branch=master)](https://travis-ci.org/zmarcantel/bystr)
+[![Build Status](https://travis-ci.org/zmarcantel/bystr-rs.svg?branch=master)](https://travis-ci.org/zmarcantel/bystr-rs)
 
 `bystr` is a Rust procedural-macro to turn a static string into an
 array of bytes at compile time. This allows for easier FFI interaction
