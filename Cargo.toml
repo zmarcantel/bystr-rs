@@ -1,11 +1,13 @@
 [package]
 name = "bystr"
-version = "0.1.0"
+version = "0.1.1"
 description = "macro to create compile-time, fixed length, byte array from a string"
 authors = ["Zach Marcantel <zmarcantel@gmail.com>"]
 edition = "2018"
 license = "GPL-3.0-or-later"
 repository = "https://github.com/zmarcantel/bystr-rs"
+readme = "README.md"
+keywords = ["ffi", "bpf", "cstring", "cstr"]
 
 [workspace]
 members = ["./bystr-impl", "./tests"]
