@@ -25,5 +25,13 @@ fn main() {
     // use it as a function call, get a null-terminated byte array
     let as_bytes = bystr!("this will be a [24; u8]");
     println!("{:?}", as_bytes);
+
+    // you may also define the length of the output array.
+    // this allows you to create fixed-length arrays larger than your string
+    // in order to match the length expected by receivers.
+    //
+    // an error will be thrown if len(str) >= len_arg.
+    let defined_length = bystr!(10, "hello");
+    assert_eq!(10, defined_length.len());
 }
 ```

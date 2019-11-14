@@ -1,6 +1,6 @@
 [package]
 name = "bystr-impl"
-version = "0.1.0"
+version = "0.1.2"
 description = "implementation of the bystr macro"
 authors = ["Zach Marcantel <zmarcantel@gmail.com>"]
 edition = "2018"

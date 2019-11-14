@@ -1,6 +1,6 @@
 [package]
 name = "bystr"
-version = "0.1.1"
+version = "0.1.2"
 description = "macro to create compile-time, fixed length, byte array from a string"
 authors = ["Zach Marcantel <zmarcantel@gmail.com>"]
 edition = "2018"
@@ -14,4 +14,4 @@ members = ["./bystr-impl", "./tests"]
 
 [dependencies]
 proc-macro-hack = "^0.5.11"
-bystr-impl = { version = "0.1.0", path = "./bystr-impl" }
+bystr-impl = { version = "0.1.2", path = "./bystr-impl" }

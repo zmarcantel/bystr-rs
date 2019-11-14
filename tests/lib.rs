@@ -1,6 +1,6 @@
-//  
-// Copyright (c) Zach Marcantel. All rights reserved.  
-// Licensed under the GPLv3. See LICENSE file in the project root for full license information.  
+//
+// Copyright (c) Zach Marcantel. All rights reserved.
+// Licensed under the GPLv3. See LICENSE file in the project root for full license information.
 //
 
 extern crate bystr;
@@ -37,7 +37,7 @@ mod strings {
     fn cstring() {
         let original = "this is a test";
         let bytes = original.as_bytes();
-        
+
         let mut nulled = bytes.to_vec();
         nulled.push(0);
 
@@ -48,5 +48,22 @@ mod strings {
         assert_eq!(&test[..], &nulled[..]);
         assert_eq!(test[test.len()-1], 0);
         assert_eq!(cstr.to_str().expect("failed to cast as cstr"), original);
+    }
+
+    #[test]
+    fn empty() {
+        let test = bystr!("");
+        assert_eq!(1, test.len());
+        assert_eq!(0, test[0]);
+    }
+
+    #[test]
+    fn defined_length() {
+        let original = ['h' as u8, 'e' as u8, 'l' as u8, 'l' as u8, 'o' as u8, 0, 0, 0, 0];
+        let test = bystr!(9, "hello");
+
+        assert_eq!(9, test.len());
+        assert_eq!(original.len(), test.len());
+        assert_eq!(&original[..], &test[..]);
     }
 }
