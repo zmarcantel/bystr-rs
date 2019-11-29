@@ -23,6 +23,13 @@ use proc_macro_hack::proc_macro_hack;
 /// // an error will be thrown if len(str) >= len_arg.
 /// let defined_length = bystr!(10, "hello");
 /// assert_eq!(10, defined_length.len());
+/// assert_eq!(defined_length, "hello\0\0\0\0\0".as_bytes()[..]);
+///
+/// // in addition to raw strings, you may also convert an identifier
+/// // to a static string:
+/// let ident_str = bystr!(defined_length);
+/// assert_eq!(15, ident_str.len());
+/// assert_eq!(ident_str, "defined_length\0".as_bytes()[..]);
 /// ```
 #[proc_macro_hack]
 pub use bystr_impl::bystr;

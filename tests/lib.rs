@@ -66,4 +66,15 @@ mod strings {
         assert_eq!(original.len(), test.len());
         assert_eq!(&original[..], &test[..]);
     }
+
+    #[test]
+    fn ident_stringify() {
+        let _foo = 42;
+        let expect = ['_' as u8, 'f' as u8, 'o' as u8, 'o' as u8, 0, 0];
+        let test = bystr!(6, _foo);
+
+        assert_eq!(6, test.len());
+        assert_eq!(expect.len(), test.len());
+        assert_eq!(&expect[..], &test[..]);
+    }
 }
